@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Web Dev 101</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+		<style>
+			h1 {
+				color: #333;
+				font-family: verdana; 
+				font-size: 30px;
+				}
+			p {
+				font-family: Georgia;
+				font-size: 14px;
+				}
+			body {
+				background-color: #ccc;
+				}
+			img {
+				width: 100%;
+				}
+		</style>
+	</head>
+	<body>
+		<nav class="navbar navbar-inverse navbar-fixed-top">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" datatoggle="collapse" data-target="#navbar" aria-expanded="false" ariacontrols="navbar">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="#">Awesome Project</a>
+				</div>
+				<div id="navbar" class="collapse navbar-collapse">
+					<ul class="nav navbar-nav">
+						<li class="active"><a href="#">Home</a></li>
+						<li><a href="#overview">Overview</a></li>
+						<li><a href="#features">Features</a></li>
+					</ul>
+				</div><!--/.nav-collapse -->
+			</div>
+		</nav>
+		<header>
+			<div class="container">
+				<div class="jumbotron">
+					<h1 style="text-align: center;">A great title!</h1>
+					<p class="lead" style="text-align: center;" >Some description.</p>
+					<p style="text-align: center;"><a class="btn btn-lg btn-success" href="http://google.com" role="button">Go to Google!</a></p>
+				</div>
+			</div>
+		</header>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-3">
+					<h1>This is a header.</h1>
+				</div>
+				<div class="col-md-3">
+					<p>I am a <strong>paragraph</strong>.</p>
+				</div>
+				<div class="col-md-6">
+					<a href="http://google.com" target="blank">Let's go to Google!</a><br>
+					<img src="http://geology.com/world/world-map.gif">
+				</div>
+			</div><br><br>
+			<div class="row">
+				<div class="col-md-2" style="background-color: white">
+					<h6>Item 1</h6>
+				</div>
+				<div class="col-md-2" style="background-color: white">
+					<h6>Item 2</h6>
+				</div>
+				<div class="col-md-2" style="background-color: white">
+					<h6>Item 3</h6>
+				</div>
+				<div class="col-md-2" style="background-color: white">
+					<h6>Item 4</h6>
+				</div>
+				<div class="col-md-2" style="background-color: white">
+					<h6>Item 5</h6>
+				</div>
+				<div class="col-md-2" style="background-color: white">
+					<h6>Item 6</h6>
+				</div>
+			</div><br>
+			<div>
+				<p id="myParagraph">
+					<button type="button" onclick="document.getElementById('myParagraph').innerHTML = 'Hello World'">Click</button>
+				</p>
+				<p id="prettyParagraph">It's so pretty!</p>
+				<button type="button" onclick="applyStyling()">Make it pretty!</button><br><br>
+			    <script>
+					function applyStyling() {
+						var paragraph = document.getElementById("prettyParagraph");
+						paragraph.style.color = "purple";
+						paragraph.style.fontSize = "29px";
+						paragraph.style.fontWeight = "700";
+						}
+				</script>
+				<input id="numericInput" type="number">
+				<p id="result"></p>
+				<button type="button" onclick="testInput()">Test Input</button>
+				<script>
+					function testInput() {
+						// Create variable to store test result
+						var text;
+						// Get the value of the input field with id="numb"
+						var x = document.getElementById("numericInput").value; 
+						if (isNaN(x) || x < 0 || x > 99) {
+							text = "Wrong input";
+						} else {
+							text = "Correct input";
+						}
+						// Display result
+						document.getElementById("result").innerHTML = text;
+					}
+				</script>
+			</div>
+		</div><br>
+		<div id="myCarousel" class="carousel slide" data-ride="carousel" style="text-align: center">
+			<div class="carousel-inner" role="listbox">
+				<div class="item active">
+					Banana
+				</div>
+				<div class="item">
+					Strawberry
+				</div>
+				<div class="item">
+					Pineapple
+				</div>
+				<div class="item">
+					Blueberry
+				</div>
+			</div>
+		</div>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function() {
+			$("#myCarousel").carousel({interval: 2000});
+			});
+		</script>
+	</body>
+</html>
